@@ -7,6 +7,8 @@
         <class>psw.esempiojpa.model.Articolo</class>
         <class>psw.esempiojpa.model.Commento</class>
         <class>psw.esempiojpa.model.Cliente</class>
+        <class>psw.esempiojpa.model.Prodotto</class>
+        <class>psw.esempiojpa.model.Categoria</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
