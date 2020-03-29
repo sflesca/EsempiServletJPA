@@ -1,6 +1,7 @@
 package psw.esempiojpa.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -41,5 +42,17 @@ public class Cliente {
     @Override
     public int hashCode() {
         return Objects.hash(id, nome);
+    }
+
+
+    private Collection<Ordine> ordini;
+
+    @OneToMany(mappedBy = "cliente")
+    public Collection<Ordine> getOrdini() {
+        return ordini;
+    }
+
+    public void setOrdini(Collection<Ordine> ordini) {
+        this.ordini = ordini;
     }
 }

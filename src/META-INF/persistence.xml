@@ -9,6 +9,8 @@
         <class>psw.esempiojpa.model.Cliente</class>
         <class>psw.esempiojpa.model.Prodotto</class>
         <class>psw.esempiojpa.model.Categoria</class>
+        <class>psw.esempiojpa.model.Ordine</class>
+        <class>psw.esempiojpa.model.dettaglioOrdine</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="update"/>

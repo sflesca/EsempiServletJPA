@@ -1,9 +1,10 @@
 package psw.esempiojpa.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
-public class Prodotto {
+public class dettaglioOrdine {
     private long id;
 
     @GeneratedValue
@@ -16,27 +17,15 @@ public class Prodotto {
         this.id = id;
     }
 
-    private String nome;
-
-    @Basic
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    private Categoria categoria;
+    private Prodotto prodotto;
 
     @ManyToOne(optional = false)
-    @JoinColumn
-    public Categoria getCategoria() {
-        return categoria;
+    public Prodotto getProdotto() {
+        return prodotto;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setProdotto(Prodotto prodotto) {
+        this.prodotto = prodotto;
     }
 
     private int qta;
@@ -59,16 +48,5 @@ public class Prodotto {
 
     public void setPrezzo(float prezzo) {
         this.prezzo = prezzo;
-    }
-
-    private long version;
-
-    @Version
-    public long getVersion() {
-        return version;
-    }
-
-    public void setVersion(long version) {
-        this.version = version;
     }
 }
